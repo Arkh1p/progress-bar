@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+}
+.title {position: absolute; top: 20px; left: 20px;}
+.progress, .control {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: relative;
+    /* border: 10px solid #005BFF; */
+    border-radius: 60px;
+    background-color: #E0E6EF;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    border-radius: 60px;
+}
+
+.form-input {
+    margin-bottom: 15px;
+    display: flex; 
+    align-items: center;
+}
+
+input {margin-right: 20px;}
+
+label {font-family: poppins;}
+
+input.number {
+    border-radius: 1em;
+    border: 1px solid #000;
+    width: 45px;
+    height: 28px;
+    text-align: center;
+}
+
+.hidden {display: none;}
+
+
+input.switch {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    height: 28px;
+    width: 45px;
+    border-radius: 1em;
+    box-shadow: inset -1.4em 0px 0px 0px#E0E6EF;
+    background-color: white;
+    border: 1px solid #E0E6EF;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+  
+input.switch:checked {
+    box-shadow: inset 1em 0px 0px 0px #005BFF;
+    border: 1px solid #005BFF;
+}
+
+.control form {
+    display: flex;
+    flex-direction: column;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition-timing-function: linear;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+@media screen and (min-width: 425px) {
+    .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .title {top: 20px;}
+    .progress, .control {width: 50%;}
+}
